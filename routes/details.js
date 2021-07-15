@@ -9,7 +9,8 @@ router.post('/', async function(req, res) {
     voltage,
     current,
     temperature,
-    batteryVoltage
+    batteryVoltage,
+    count
   } = req.body;
 
   // save the data to the model
@@ -17,7 +18,8 @@ router.post('/', async function(req, res) {
     voltage,
     current,
     temperature,
-    batteryVoltage
+    batteryVoltage,
+    count
   });
   await newDetail.save()
   res.send({data: newDetail});

@@ -5,7 +5,8 @@ const dataSchema = new mongoose.Schema({
     voltage: Number,
     current: Number,
     temperature: Number,
-    batteryVoltage :Number
+    batteryVoltage :Number,
+    count: Number
 },{
     timestamps: { createdAt: '_created_at', updatedAt: '_updated_at' }
 });
