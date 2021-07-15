@@ -16,7 +16,7 @@ const MONGODB_USERNAME = "nodeuser";
 const MONGODB_PASSWORD = "o4kasibe";
 const MONGODB_DATABASE = "iot";
 // connect to mongoose using the string
-const mongoDBconnectionString = `mongodb+srv://${MONGODB_USERNAME}:${MONGODB_PASSWORD}@prodeus-chrome.ucmko.mongodb.net/${MONGODB_DATABASE}?retryWrites=true&w=majority`
+const mongoDBconnectionString = `mongodb+srv://${MONGODB_USERNAME}:${MONGODB_PASSWORD}@database.6xmr5.mongodb.net/${MONGODB_DATABASE}?retryWrites=true&w=majority`
 mongoose.connect(mongoDBconnectionString,{
   useNewUrlParser: true,
   useUnifiedTopology: true,
