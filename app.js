@@ -12,8 +12,8 @@ var detailsRoute = require('./routes/details');
 var app = express();
 // define database variables
 // TODO extract to environmental variables if need be
-const MONGODB_USERNAME = "nodeuser";
-const MONGODB_PASSWORD = "o4kasibe";
+const MONGODB_USERNAME = "";
+const MONGODB_PASSWORD = "";
 const MONGODB_DATABASE = "iot";
 // connect to mongoose using the string
 const mongoDBconnectionString = `mongodb+srv://${MONGODB_USERNAME}:${MONGODB_PASSWORD}@prodeus-chrome.ucmko.mongodb.net/${MONGODB_DATABASE}?retryWrites=true&w=majority`
