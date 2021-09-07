@@ -12,11 +12,12 @@ var detailsRoute = require('./routes/details');
 var app = express();
 // define database variables
 // TODO extract to environmental variables if need be
-const MONGODB_USERNAME = "nodeuser";
-const MONGODB_PASSWORD = "o4kasibe";
-const MONGODB_DATABASE = "iot";
+const MONGODB_USERNAME = "nodeUser";
+const MONGODB_PASSWORD = "B9pRewWMasKYXKif";
+const MONGODB_DATABASE = "flowRates";
 // connect to mongoose using the string
-const mongoDBconnectionString = `mongodb+srv://${MONGODB_USERNAME}:${MONGODB_PASSWORD}@database.6xmr5.mongodb.net/${MONGODB_DATABASE}?retryWrites=true&w=majority`
+const mongoDBconnectionString = `mongodb+srv://${MONGODB_USERNAME}:${MONGODB_PASSWORD}@projectflow.ileon.mongodb.net/${MONGODB_DATABASE}?retryWrites=true&w=majority`;
+
 mongoose.connect(mongoDBconnectionString,{
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -34,7 +35,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/details', detailsRoute);
+app.use('/data', detailsRoute);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
